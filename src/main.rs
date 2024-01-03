@@ -125,7 +125,7 @@ impl Game{
 
     fn play_game(&mut self)
     {
-        println!("Welcome to Foxle, your word is {} and its {} letters long", self.word.guess, self.word.guess_length);
+        println!("Welcome to Foxle, your word is {} letters long", self.word.guess_length);
         
         while self.is_game_over() == false
         {
