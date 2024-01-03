@@ -38,6 +38,7 @@ impl GuessResult {
             }
         }
     }
+
     fn check_guess_result_with_game_word(&mut self, game_word: &GuessWord) {
         for letter in &mut self.guess_letters {
 
@@ -63,8 +64,6 @@ impl GuessResult {
         true
     }
 }
-
-
 
 #[derive(Debug)]
 struct Letter {
@@ -136,9 +135,10 @@ impl Game{
                 println!("Your guess is not the right length, try again:");
                 self.set_guess_from_user_input();
             }
-    
+
             self.set_game_guess_results();
             self.print_guess_result();
+
             if self.is_game_won() {
                 println!("You won the game!");
                 break;
@@ -146,9 +146,6 @@ impl Game{
             self.num_of_guesses += 1;
         }
     }
-    
-
-
 }
 
 fn get_letters(word: &str) -> Vec<Letter> {
